@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #ff6a88, #ff99ac, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+/* Animated Background */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    width: 380px;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    animation: float 4s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+input {
+    width: 95%;
+    padding: 14px;
+    margin: 15px 0;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+input:focus {
+    box-shadow: 0 0 15px #ffffff;
+    transform: scale(1.05);
+}
+
+button {
+    width: 95%;
+    padding: 14px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s ease;
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.35);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#status {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+#history {
+    margin-top: 15px;
+    max-height: 120px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.history-item {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    backdrop-filter: blur(10px);
+}
+.app-title {
+    margin-bottom: 30px;
+    line-height: 1;
+}
+
+.main-title {
+    font-size: 72px;
+    font-weight: 900;
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+
+    /* Standard property */
+    background-clip: text;
+
+    /* Chrome / Safari support */
+    -webkit-background-clip: text;
+
+    color: transparent;
+    letter-spacing: 4px;
+}
